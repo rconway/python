@@ -15,7 +15,6 @@ extent = {
 }
 
 # Specify processes
-#proc1 = sentinel2.coverage(extent).process("MultiSensorNDVI")
 proc1 = sentinel2.collection("S2_DATA").coverage(extent).process("MultiSensorNDVI")
 proc2 = probav.collection("PV_DATA").coverage(extent).process("MultiSensorNDVI")
 proc3 = deimos.collection("DM_DATA").coverage(extent).process("MultiSensorNDVI")

@@ -1,7 +1,9 @@
 import eoepca
 
 # Connect to primary platform
-tep = eoepca.platform("http://tep.eo").auth("bob@home.org", "MY-API-KEY")
+tep = eoepca.platform("http://tep.eo").auth("bob@home.org", "<<MY-API-KEY>>")
+# Or, use the 'local' hosting platform
+tep = eoepca.platform().auth("bob@home.org", "<<MY-API-KEY>>")
 
 # Init supporting platforms
 sentinel2 = eoepca.platform("http://sentinel2.eo")
@@ -23,5 +25,5 @@ proc3 = deimos.collection("DM_DATA").coverage(extent).process("MultiSensorNDVI")
 workflow = tep.parallel([proc1, proc2, proc3]).process("NDVIStacker")
 
 # Get result - initiates 'lazy' execution
-result = workflow.download(format="geotiff")
+result = workflow.retrieve(format="geotiff")
 print(result)

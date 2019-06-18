@@ -1,7 +1,7 @@
 
 class Process:
     
-    def download(self, format):
+    def retrieve(self, format):
         return f"<<data of type {format}>>"
 
 class Collection:
@@ -30,5 +30,5 @@ class Platform:
     def parallel(self, tasks):
         return ParallelTasks()
 
-def platform(name):
+def platform(name = "local"):
     return Platform()

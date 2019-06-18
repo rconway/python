@@ -6,8 +6,8 @@ session = boto3.session.Session()
 client = session.client('s3',
                         region_name='ams3',
                         endpoint_url='https://ams3.digitaloceanspaces.com',
-                        aws_access_key_id='K7JKWNXLF53X5K3ZYZS2',
-                        aws_secret_access_key='mv9j+V++6uhl3UiSmAwH4ExJnV7MafSxlObXWh00S04')
+                        aws_access_key_id='TBD',
+                        aws_secret_access_key='tbd')
 
 # Create a new Space.
 client.create_bucket(Bucket='rac-my-new-space')

@@ -21,7 +21,7 @@ class ParallelTasks:
 
 class Platform:
 
-    def auth(self, id, token):
+    def authenticate(self, id, token):
         return self
 
     def collection(self, name):

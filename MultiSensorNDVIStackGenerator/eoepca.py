@@ -1,7 +1,7 @@
 
 class Process:
     
-    def retrieve(self, format):
+    def retrieve(self, format, options):
         return f"<<data of type {format}>>"
 
 class Collection:
